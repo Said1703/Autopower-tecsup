@@ -14,7 +14,7 @@ export default function ContainerPiceBasic() {
       </button>
 
       <ul>
-        <li class="flex items-center gap-4 pl-4 pr-5 text-sm text-left mt-4  bg-white-skyblue-select py-2">
+        <li className="flex items-center gap-4 pl-4 pr-5 text-sm text-left mt-4  bg-white-skyblue-select py-2">
           <div>
             <p className="font-semibold tracking-wide ">
               ⭐ Asistencia las 24 horas:

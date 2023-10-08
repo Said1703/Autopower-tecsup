@@ -1,6 +1,6 @@
 import logo from "../../assets/logo/logo-blanco.svg";
 import hamburger from "../../assets/icons/icon-hamburger.svg";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 export default function Layout() {
   return (
     <>
@@ -22,6 +22,7 @@ export default function Layout() {
           <img className="visibility md:hidden" src={hamburger} alt="" />
         </div>
       </nav>
+      <Outlet />
     </>
   );
 }
