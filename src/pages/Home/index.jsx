@@ -3,6 +3,7 @@ import {
   ButtonSecundary,
   ContainerPriceBasic,
   ContainerPriceGold,
+  ContainerPricePlatinum,
   Footer,
   Layout,
   Hero,
@@ -23,6 +24,7 @@ export default function Home() {
           <div class="md:flex mt-8 md:mt-16 gap-12 ">
             <ContainerPriceBasic />
             <ContainerPriceGold />
+            <ContainerPricePlatinum />
           </div>
         </section>
         <Footer />
