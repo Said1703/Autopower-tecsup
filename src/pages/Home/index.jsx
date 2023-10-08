@@ -3,7 +3,6 @@ import {
   ButtonSecundary,
   ContainerPriceBasic,
   ContainerPriceGold,
-  ContainerPricePlatinum,
   Footer,
   Layout,
   Hero,
@@ -12,9 +11,8 @@ import {
 export default function Home() {
   return (
     <>
-      <h1>Prueba</h1>
       <main className="bg-white-skyblue">
-        <Header />
+        <Layout />
         <section>
           <Hero />
         </section>
@@ -25,7 +23,6 @@ export default function Home() {
           <div class="md:flex mt-8 md:mt-16 gap-12 ">
             <ContainerPriceBasic />
             <ContainerPriceGold />
-            <ContainerPricePlatinum />
           </div>
         </section>
         <Footer />
