@@ -11,11 +11,11 @@ export default function ContainerPriceGold() {
         </h2>
 
         <p className="text-center italic text-sm text-slate-700 ">
-          ANTES US$ 29.99
+          ANTES S/. 29.99
         </p>
 
         <h2 className="text-3xl font-bold mb-2 text-center color-#1F3142">
-          US$ 22.99
+          S/. 22.99
         </h2>
 
         <button className="bg-sky-400 text-white font-semibold py-2  tracking-widest rounded-md mx-10 hover:bg-sky-400 hover:shadow-lg hover:shadow-cyan-200/50">
