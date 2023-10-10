@@ -6,7 +6,7 @@ export default function ContainerPricePlatinum() {
       </h2>
 
       <h2 className="text-3xl font-bold my-2 text-center color-#1F3142 ">
-        US$ 39.99
+        S/. 39.99
       </h2>
 
       <button className="bg-sky-400 text-white font-semibold py-2  tracking-widest rounded-md mx-10 hover:bg-sky-400 hover:shadow-lg hover:shadow-cyan-200/50">

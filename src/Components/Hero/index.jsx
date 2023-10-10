@@ -32,7 +32,7 @@ export default function Hero() {
             Desde
           </p>
           <h2 className="text-4xl md:text-5xl lg:md:text-7xl font-bold text-gold lg:my-4">
-            US$ 22.99
+            S/. 22.99
           </h2>
           <h2 className="flex items-start text-xs pl-14 md:pl-0 md:text-base lg:text-xl">
             Por mes

@@ -4,10 +4,11 @@ import {
   ContainerPriceBasic,
   ContainerPriceGold,
   ContainerPricePlatinum,
-  Footer,
   Layout,
   Hero,
   ProgressBar,
+  SliderIcon,
+  SlideQuestions,
 } from "../../Components";
 export default function Home() {
   return (
@@ -27,7 +28,18 @@ export default function Home() {
             <ContainerPricePlatinum />
           </div>
         </section>
-        <Footer />
+
+        <section class="mt-12 w-[90%] m-auto">
+          <h2 class="text-xl md:text-2xl font-bold text-center">
+            Razones para proteger tu vehiculo
+          </h2>
+          <SliderIcon />
+        </section>
+
+        <section class="flex flex-col items-center justify-center">
+          <h2 class="text-xl md:text-2xl font-bold">Preguntas frecuentes</h2>
+          <SlideQuestions />
+        </section>
       </main>
     </>
   );

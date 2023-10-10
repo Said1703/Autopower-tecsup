@@ -1,7 +1,10 @@
+import { Layout } from "../../Components";
 export default function BuyService() {
   return (
     <>
-      <h1>Hola</h1>
+      <main className="bg-white-skyblue">
+        <Layout />
+      </main>
     </>
   );
 }
