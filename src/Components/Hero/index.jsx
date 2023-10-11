@@ -2,7 +2,7 @@ import star from "../../assets/icons/star.png";
 import auto from "../../assets/img/auto.png";
 export default function Hero() {
   return (
-    <div className="mt-16 md:mt-36 border border-white w-[90%] md:w-[70%] m-auto  rounded-2xl  bg-gradient-to-r from-green-400 to-blue-500 md:flex   ">
+    <div className="mt-16 md:mt-8 border border-white w-[90%] md:w-[70%] m-auto  rounded-2xl  bg-gradient-to-r from-green-400 to-blue-500 md:flex   ">
       <div className="flex flex-col w-full md:w-[60%]  my-4 md:my-4  ">
         <h2 className="mb-4 py-0.5 md:py-1.5 w-[80%] md:w-[95%] text-center text-[20px] md:text-[30px] tracking-wider font-bold  bg-gradient-to-r from-blue-600	rounded-r-md text-[#FFF8E1] italic   ">
           Del 24 al 31 de Octubre
