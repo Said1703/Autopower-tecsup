@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Cards from 'react-credit-cards-2';
 import 'react-credit-cards-2/dist/es/styles-compiled.css'
 
-export default function Payment() {
+export default function ConatinerData() {
 
     const [values, setValues] = useState({
         number: '',
@@ -12,24 +12,39 @@ export default function Payment() {
         focus: '',
     })
 
+    const [buttonActive,setButtonActive]=useState(false)
+
     const handleInputChange = (evt) => {
         const { name, value } = evt.target;
 
         setValues((prev) => ({ ...prev, [name]: value }));
+            
+        const inputs = Object.values(values)
+
+        const complete = inputs.every(input=>input!=="") 
+        
+        if (complete) {
+            setButtonActive(true)
+        }
+
+        console.log(inputs)
+        console.log(complete);
     }
 
     const handleInputFocus = (evt) => {
         setValues((prev) => ({ ...prev, focus: evt.target.name }));
     }
 
-    return(
+
+    return (
+
         <div className="flex items-center bg-white justify-center mt-16 pb-4 px-2">
 
             <div className="w-full md:w-4/12 bg-white rounded-3xl md:mt-8 shadow-lg border hover:border-blue-500">
                 <h2 className="text-2xl font-bold text-center mt-2 mb-4 text-blue-900">Tarjeta de Crédito</h2>
                 <hr className="bg-blue-400" />
 
-                <div className="card bg-white mt-6">
+                <div className="card bg-white mt-6 px-2">
                     <Cards
                         number={values.number}
                         expiry={values.expiry}
@@ -63,7 +78,7 @@ export default function Payment() {
                                 required />
                         </div>
 
-                        <div className="flex gap-4 justify-center">
+                        <div className="flex gap-2">
                             <div>
                                 <input type="text"
                                     name="expiry"
@@ -92,13 +107,18 @@ export default function Payment() {
                         <div className="text-center px-5 my-6">
                             <p className="text-xs">Acepto los términos y condiciones de este producto y autorizo el tratamiento de mis datos,documentos que manifiesto haber leído.</p>
                             <div className="flex justify-center mt-4">
-                                <input type="checkbox" name="" id="checked-checkbox" className="border-rounded-3xl w-8" />
+                                <input type="checkbox" name="" id="checked-checkbox" className="border-rounded-3xl w-8"/>
                                 <p className="ml-2 text-s font-medium text-gray-900">Aceptar</p>
                             </div>
                         </div>
 
                         <div className="flex justify-center">
-                            <button className="bg-gray-400 text-white font-semibold w-11/12 mt- py-2 mb-2 px-4 rounded-lg hover:bg-sky-400 hover:shadow-lg hover:shadow-cyan-200/50 md:w-7/12">
+                            <button 
+                            className="bg-blue-400 text-white font-semibold w-11/12 mt- py-2 mb-2 px-4 rounded-lg hover:bg-sky-400 hover:shadow-lg hover:shadow-cyan-200/50 md:w-7/12"
+                            disabled={!buttonActive}
+                            onChange={handleInputChange}
+
+                            >
                                 Siguiente
                             </button>
                         </div>
@@ -106,11 +126,11 @@ export default function Payment() {
                     </form>
 
 
-
-
                 </div>
             </div>
         </div>
 
-    )
+
+
+    );
 }
