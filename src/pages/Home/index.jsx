@@ -1,6 +1,5 @@
 import {
-  ButtonPrimary,
-  ButtonSecundary,
+  Button,
   ContainerPriceBasic,
   ContainerPriceGold,
   ContainerPricePlatinum,

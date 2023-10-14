@@ -1,3 +1,4 @@
+import { Button } from "../../Components";
 import star from "../../assets/icons/star.png";
 import auto from "../../assets/img/auto.png";
 export default function Hero() {
@@ -49,9 +50,9 @@ export default function Hero() {
           <p>Contamos con todos los complementos para tu auto.</p>
         </div>
 
-        <button className="md:ml-16 lg:ml-20 border border-white py-0.5 md:py-1.5 lg:py-3 px-24 lg:px-36 mt-5 md:mt-6 lg:mt-8 text-lg text-white font-semibold tracking-widest rounded-md mb-6 lg:mb-2 hover:bg-white hover:text-black">
-          Cotizar
-        </button>
+        <div className=" flex justify-center mt-5">
+          <Button type="submit" text="Cotizar" variant="secondary" />
+        </div>
       </div>
     </div>
   );

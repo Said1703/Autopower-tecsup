@@ -1,3 +1,4 @@
+import { Button } from "../../Components";
 export default function ContainerPricePlatinum() {
   return (
     <div className="border border-[#0083B4] rounded-2xl flex flex-col mt-12 md:w-[33%] md:mt-6 bg-white">
@@ -9,9 +10,9 @@ export default function ContainerPricePlatinum() {
         S/. 39.99
       </h2>
 
-      <button className="bg-sky-400 text-white font-semibold py-2  tracking-widest rounded-md mx-10 hover:bg-sky-400 hover:shadow-lg hover:shadow-cyan-200/50">
-        Cotizar
-      </button>
+      <div className=" flex justify-center">
+        <Button type="submit" text="Cotizar" variant="primary" />
+      </div>
 
       <ul>
         <li className="flex items-center gap-4 pl-4 pr-5 text-sm text-left mt-4  bg-white-skyblue-select h-20">
@@ -20,8 +21,7 @@ export default function ContainerPricePlatinum() {
               ⭐ Seguro contra robos del 60%:
             </p>
             <p className="text-xs ml-6">
-              Si tu miedo es el robo de tu vehiculo, este plan te cubrira ante
-              esta situacion para tu tranquilidad.
+              Este plan te cubrira ante robos para tu tranquilidad.
             </p>
           </div>
         </li>
