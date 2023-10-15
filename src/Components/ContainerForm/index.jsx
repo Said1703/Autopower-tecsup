@@ -1,3 +1,4 @@
+import { Button } from "../../Components";
 import React, { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 
@@ -331,13 +332,12 @@ export default function ContainerForms() {
               )}
             </div>
             <div className="mb-4 text-center">
-              <button
+              <Button
                 type="submit"
-                className="bg-gray-400 text-white font-semibold w-11/12 py-2 mb-4 px-4 rounded-lg hover:bg-sky-400 hover:shadow-lg hover:shadow-cyan-200/50 md:w-7/12"
-                // disabled={validateCampo}
-              >
-                Siguiente
-              </button>
+                text="siguiente"
+                variant="primary"
+                disabled={false}
+              />
             </div>
           </form>
         </div>

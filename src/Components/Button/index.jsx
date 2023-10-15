@@ -3,6 +3,7 @@ export default function Button({
   type = "button",
   className,
   variant = "primary",
+  disabled = false,
 }) {
   const colors = {
     primary:
@@ -16,6 +17,7 @@ export default function Button({
     <>
       <button
         type={type}
+        disabled={disabled}
         className={`w-11/12 py-2 mb-4 px-4 rounded-lg md:w-7/12 ${colors[variant]} ${className}`}
       >
         {text}
