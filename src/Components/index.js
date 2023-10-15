@@ -15,5 +15,7 @@ export {default as Layout} from "./Layout";
 
 export {default as Hero} from "./Hero";
 export {default as ProgressBar} from "./ProgressBar";
+export {default as PaymentConfirmation} from "./PaymentConfirmation"
+
 export {default as SliderIcon} from "./SlideIcon";
 export {default as SlideQuestions} from "./SlideQuestions"
