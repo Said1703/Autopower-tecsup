@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../../Components";
 export default function ContainerPiceBasic() {
   return (
@@ -9,9 +10,11 @@ export default function ContainerPiceBasic() {
       <h2 className="text-3xl font-bold my-2 text-center color-#1F3142 ">
         S/. 19.99
       </h2>
-      <div className=" flex justify-center">
-        <Button type="submit" text="Cotizar" variant="primary" />
-      </div>
+      <Link to={`/BuyService/`}>
+        <div className=" flex justify-center">
+          <Button type="submit" text="Cotizar" variant="primary" />
+        </div>
+      </Link>
 
       <ul>
         <li className="flex items-center gap-4 pl-4 pr-5 text-sm text-left mt-4  bg-white-skyblue-select py-2">
