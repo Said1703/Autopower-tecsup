@@ -48,7 +48,7 @@ export default function ContainerBill() {
           </div>
           <div className="w-1/3  mx-auto h-10">
             <p className="text-blue-700">
-              <a href="#" class="text-xs">
+              <a href="#" className="text-xs">
                 Término de contrato
               </a>
             </p>
