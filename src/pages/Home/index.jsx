@@ -25,15 +25,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section class="mt-12 w-[90%] m-auto">
-          <h2 class="text-xl md:text-2xl font-bold text-center">
+        <section className="mt-12 w-[90%] m-auto">
+          <h2 className="text-xl md:text-2xl font-bold text-center">
             Razones para proteger tu vehiculo
           </h2>
           <SliderIcon />
         </section>
 
-        <section class="flex flex-col items-center justify-center">
-          <h2 class="text-xl md:text-2xl font-bold">Preguntas frecuentes</h2>
+        <section className="flex flex-col items-center justify-center">
+          <h2 className="text-xl md:text-2xl font-bold">Preguntas frecuentes</h2>
           <SlideQuestions />
         </section>
       </main>
