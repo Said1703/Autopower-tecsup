@@ -1,9 +1,4 @@
-
 export {default as Button} from "./Button";
-
-//a
-
-//b
 export {default as CloseButton} from "./CloseButton"
 export {default as CircleButton} from "./CircleButton";
 export {default as ContainerPriceBasic} from "./ContainerPriceBasic";
