@@ -35,9 +35,7 @@ export default function Home() {
         </section>
 
         <section className="flex flex-col items-center justify-center">
-          <h2 className="text-xl md:text-2xl font-bold">
-            Preguntas frecuentes
-          </h2>
+          <h2 className="text-xl md:text-2xl font-bold">Preguntas frecuentes</h2>
           <SlideQuestions />
         </section>
       </main>
