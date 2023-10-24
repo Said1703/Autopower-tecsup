@@ -14,7 +14,7 @@ export default function Modal({ visible, onClose }) {
         onClick={handleOnClose}
         className="fixed inset-0 z-40 bg-black bg-opacity-20"
       >
-        <div className="fixed top-16 left-0 right-0 bottom-10 w-4/5 md:w-3/6 h-4/6 md:h-4/6 mx-auto bg-gray-900/80 rounded-xl backdrop-blur-md flex flex-col md:flex-row gap-8 z-50">
+        <div className="fixed top-16 left-0 right-0 bottom-10 w-full md:w-3/6 h-4/6 md:h-4/6 mx-auto bg-gray-900/80 rounded-xl backdrop-blur-md flex flex-col md:flex-row gap-8 z-50">
           <img
             className="hidden md:block h-auto rounded-l-xl"
             src={modalImage}
@@ -31,8 +31,8 @@ export default function Modal({ visible, onClose }) {
                 className="w-8 md:w-10 bg-white m-4 m p-3 left-5"
               />
             </div>
-            <div className="flex flex-col justify-center">
-              <h3 className="text-white text-lg md:text-3xl mb-2 md:mb-5">
+            <div className="flex flex-col justify-center justify-items-center text-center">
+              <h3 className="text-white text-lg md:text-3xl mb-2 md:mb-5 font-bold">
                 Bienvenido a Auto Power
               </h3>
               <p className="hidden md:block text-white p-4 mb-2 md:mb-4 text-sm">
@@ -51,7 +51,13 @@ export default function Modal({ visible, onClose }) {
                 lacus sed interdum lobortis, felis mi eleifend lacus, quis
                 maximus sapien ex at sapien.
               </p>
-              <Button type="submit" text="Cotizar" variant="secondary" />
+              <div className="flex justify-center">
+                <Button
+                  type="submit"
+                  text="Sobre nosotros"
+                  variant="secondary"
+                />
+              </div>
             </div>
           </div>
         </div>
