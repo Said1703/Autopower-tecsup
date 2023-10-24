@@ -1,15 +1,17 @@
+import { useState } from "react";
 import {
-  Button,
   ContainerPriceBasic,
   ContainerPriceGold,
   ContainerPricePlatinum,
-  Layout,
   Hero,
-  ProgressBar,
   SliderIcon,
   SlideQuestions,
+  Modal,
 } from "../../Components";
 export default function Home() {
+  const [showModal, setShowModal] = useState(false);
+  const handleOnClose = () => setShowModal(true);
+
   return (
     <>
       <main className="bg-white-skyblue">
@@ -37,6 +39,8 @@ export default function Home() {
           <SlideQuestions />
         </section>
       </main>
+
+      <Modal onClose={handleOnClose} visible={showModal} />
     </>
   );
 }

@@ -61,7 +61,7 @@ export default function SlideQuestions() {
       <div className="relative w-11/12 md:w-7/12 overflow-hidden mb-12 bg-white border rounded-t-lg">
         <input
           type="checkbox"
-          class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer"
+          className="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer"
         />
 
         <div className="bg-white border-1px w-full pl-5 flex items-center md:justify-center h-16 md:h-14">
