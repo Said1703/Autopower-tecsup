@@ -5,6 +5,7 @@ export default function Layout() {
   return (
     <>
       <nav className="fixex top-0 left-0 bg-gradient-to-r from-cyan-500 to-blue-500 w-full shadow p-3 z-30">
+
         <div className="container m-auto flex justify-between items-center text-white">
           <img className="md:w-44 w-32 ml-6" src={logo} />
           <ul className="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
