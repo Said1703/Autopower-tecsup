@@ -5,7 +5,7 @@ import like from "../../assets/icons/like.svg";
 import star from "../../assets/icons/star.png";
 
 
-export default function PaymentConfirmation({ valoresForms,setValoresForms }) {
+export default function PaymentConfirmation({ valoresForms }) {
   return (
 
     <FormWindow className="border flex flex-col">
@@ -21,7 +21,8 @@ export default function PaymentConfirmation({ valoresForms,setValoresForms }) {
           id="nameCongratulation"
           className="text-lg font-bold py-2 uppercase"
         >
-          {setValoresForms.value}
+          {valoresForms.nombre}
+          
         </h3>
 
         <p className="pb-4">
