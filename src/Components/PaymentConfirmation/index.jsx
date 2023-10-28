@@ -22,7 +22,6 @@ export default function PaymentConfirmation({ valoresForms }) {
           className="text-lg font-bold py-2 uppercase"
         >
           {valoresForms.nombre}
-          
         </h3>
 
         <p className="pb-4">

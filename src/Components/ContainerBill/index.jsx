@@ -7,6 +7,8 @@ export default function ContainerBill({ setActiveStep }) {
     e.preventDefault();
     setActiveStep(2)
   }
+
+  const planSeleccionado = JSON.parse(localStorage.getItem('plan_seleccionado'))
   return (
 
     <FormWindow>
@@ -69,7 +71,7 @@ export default function ContainerBill({ setActiveStep }) {
             <p className="">Tarifa Mensual:</p>
           </div>
           <div className="w-1/3  mx-auto h-10">
-            <p className="font-bold">$22.99</p>
+            <p className="font-bold">{planSeleccionado.precio}</p>
           </div>
         </div>
 

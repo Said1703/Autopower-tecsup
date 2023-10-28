@@ -9,6 +9,13 @@ import {
   Modal,
 } from "../../Components";
 export default function Home() {
+
+  const [pryceForm, setPryceForm]=useState({
+    Basic: 10,
+    Gold: 20,
+    Platinium:30
+  })
+
   const [showModal, setShowModal] = useState(false);
   const handleOnClose = () => setShowModal(true);
 
@@ -21,9 +28,9 @@ export default function Home() {
             Conoce nuestros planes de seguro vehicular
           </h2>
           <div className="md:flex mt-8 md:mt-16 gap-12 ">
-            <ContainerPriceBasic />
-            <ContainerPriceGold />
-            <ContainerPricePlatinum />
+            <ContainerPriceBasic pryceForm={pryceForm}/>
+            <ContainerPriceGold pryceForm={pryceForm}/>
+            <ContainerPricePlatinum pryceForm={pryceForm}/>
           </div>
         </section>
 
