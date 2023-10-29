@@ -2,22 +2,20 @@
 import { Button, FormWindow } from "../../Components";
 
 export default function ContainerBill({ setActiveStep }) {
-
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    setActiveStep(2)
-  }
+    setActiveStep(2);
+  };
   return (
-
     <FormWindow>
       <form onSubmit={handleFormSubmit}>
-        <h2 className="text-2xl font-bold text-center mt-2 mb-4">
+        <h2 className="text-2xl font-bold text-center mt-1 mb-2">
           Contrato de plan
         </h2>
         <hr />
 
         <div className="flex justify-center">
-          <h1 className="text-2xl font-bold text-center text-sky-400 mt-8 mb-4">
+          <h1 className="text-2xl font-bold text-center text-sky-400 mt-4 mb-4">
             Plan Gold
           </h1>
         </div>
@@ -95,8 +93,6 @@ export default function ContainerBill({ setActiveStep }) {
           <Button type="submit" text="siguiente" variant="primary" />
         </div>
       </form>
-
     </FormWindow>
-
   );
 }
