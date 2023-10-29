@@ -1,6 +1,16 @@
+/* eslint-disable react/prop-types */
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../Components";
 
-export default function ContainerPriceGold() {
+export default function ContainerPriceGold({pryceForm}) {
+
+  const navigate = useNavigate()
+
+  const handleButtonClick= ()=>{
+    localStorage.setItem('plan_seleccionado', JSON.stringify({ plan: 'Gold', precio: 20 }))
+    navigate("/BuyService")
+  }
+
   return (
     <div className="mt-12 md:mt-0 bg-darkblue-select rounded-2xl md:w-[33%] md:h-[33%]">
       <h2 className="text-center italic text-white rounded-t-2xl tracking-wide font-semibold">
@@ -17,11 +27,11 @@ export default function ContainerPriceGold() {
         </p>
 
         <h2 className="text-3xl font-bold mb-2 text-center color-#1F3142">
-          S/. 22.99
+        {pryceForm.Gold}
         </h2>
 
         <div className=" flex justify-center">
-          <Button type="submit" text="Cotizar" variant="primary" />
+          <Button type="submit" text="Cotizar" variant="primary" handleButtonClick={handleButtonClick}/>
         </div>
 
         <ul>
