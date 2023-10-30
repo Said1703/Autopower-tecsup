@@ -6,7 +6,6 @@ import star from "../../assets/icons/star.png";
 import auto from "../../assets/img/auto.png";
 import auto2 from "../../assets/img/auto2.png";
 import auto3 from "../../assets/img/auto3.png";
-import CircleButton from "../CircleButton";
 
 export default function Hero() {
   return (

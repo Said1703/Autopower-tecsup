@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import modalImage from "../../../public/modal.jpg";
 import modalImageResponsive from "../../../public/modal-responsive.jpg";
 import CloseButton from "../CloseButton";
@@ -51,13 +52,11 @@ export default function Modal({ visible, onClose }) {
                 lacus sed interdum lobortis, felis mi eleifend lacus, quis
                 maximus sapien ex at sapien.
               </p>
-              <div className="flex justify-center">
-                <Button
-                  type="submit"
-                  text="Sobre nosotros"
-                  variant="secondary"
-                />
-              </div>
+              <Link to="/Benefits">
+                <div className="flex justify-center">
+                  <Button type="submit" text="Beneficios" variant="secondary" />
+                </div>
+              </Link>
             </div>
           </div>
         </div>
