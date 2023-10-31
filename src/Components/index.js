@@ -14,8 +14,11 @@ export {default as Paragraph} from "./Paragraph"
 export {default as ProgressBar} from "./ProgressBar";
 export {default as PaymentConfirmation} from "./PaymentConfirmation"        
 export {default as SliderIcon} from "./SlideIcon";
-export {default as SlideQuestions} from "./SlideQuestions"
-export {default as Status} from "./Status"
-export {default as TermsAndConditions} from "./TermsAndConditions"
+export {default as SlideQuestions} from "./SlideQuestions";
+export {default as Status} from "./Status";
+export {default as TermsAndConditions} from "./TermsAndConditions";
+export {default as HeroBenefit} from "./HeroBenefit";
+export {default as BenefitCard} from "./BenefitCard";
+export{default as TableBenefit} from "./TableBenefit"
 
 

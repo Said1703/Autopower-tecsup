@@ -11,23 +11,24 @@ export default function ContainerBill({ setActiveStep }) {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    setActiveStep(2)
-  }
+
 
   const planSeleccionado = JSON.parse(localStorage.getItem('plan_seleccionado'))
 
-  return (
 
+  return (
     <FormWindow>
       <form onSubmit={handleFormSubmit}>
-        <h2 className="text-2xl font-bold text-center mt-2 mb-4">
+        <h2 className="text-2xl font-bold text-center mt-1 mb-2">
           Contrato de plan
         </h2>
         <hr />
 
         <div className="flex justify-center">
+
           <h1 className="text-2xl font-bold text-center text-sky-400 mt-8 mb-4">
             {planSeleccionado.plan}
+
           </h1>
         </div>
 
@@ -104,8 +105,6 @@ export default function ContainerBill({ setActiveStep }) {
           <Button type="submit" text="siguiente" variant="primary" />
         </div>
       </form>
-
     </FormWindow>
-
   );
 }
