@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../Components";
 
 export default function ContainerPriceBasic({pryceForm}) {
@@ -19,7 +19,7 @@ export default function ContainerPriceBasic({pryceForm}) {
       </h2>
 
       <h2 className="text-3xl font-bold my-2 text-center color-#1F3142 ">
-        {pryceForm.Basic}
+        ${pryceForm.Basic}
       </h2>
    
         <div className=" flex justify-center">

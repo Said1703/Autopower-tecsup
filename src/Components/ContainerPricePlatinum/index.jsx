@@ -17,7 +17,7 @@ export default function ContainerPricePlatinum({pryceForm}) {
       </h2>
 
       <h2 className="text-3xl font-bold my-2 text-center color-#1F3142 ">
-        {pryceForm.Platinium}
+        ${pryceForm.Platinium}
       </h2>
 
       <div className=" flex justify-center">

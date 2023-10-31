@@ -23,11 +23,11 @@ export default function ContainerPriceGold({pryceForm}) {
         </h2>
 
         <p className="text-center italic text-sm text-slate-700 ">
-          ANTES S/. 29.99
+          ANTES $. 29.99
         </p>
 
         <h2 className="text-3xl font-bold mb-2 text-center color-#1F3142">
-        {pryceForm.Gold}
+        ${pryceForm.Gold}
         </h2>
 
         <div className=" flex justify-center">
