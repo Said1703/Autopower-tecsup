@@ -16,12 +16,6 @@ export default function ContainerBill({ setActiveStep }) {
     localStorage.getItem("plan_seleccionado")
   );
 
-
-
-  const planSeleccionado = JSON.parse(localStorage.getItem('plan_seleccionado'))
-
-
-
   return (
     <FormWindow>
       <form onSubmit={handleFormSubmit}>
