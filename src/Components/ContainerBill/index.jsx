@@ -2,8 +2,6 @@
 import { Button, FormWindow } from "../../Components";
 
 export default function ContainerBill({ setActiveStep }) {
-
-
   const today = new Date();
 
   const datePeriodo = new Date();
@@ -11,15 +9,23 @@ export default function ContainerBill({ setActiveStep }) {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    setActiveStep(2);
+  };
+
+  const planSeleccionado = JSON.parse(
+    localStorage.getItem("plan_seleccionado")
+  );
+
 
 
   const planSeleccionado = JSON.parse(localStorage.getItem('plan_seleccionado'))
 
 
+
   return (
     <FormWindow>
       <form onSubmit={handleFormSubmit}>
-        <h2 className="text-2xl font-bold text-center mt-1 mb-2">
+        <h2 className="text-2xl font-bold text-center mt-2 mb-4">
           Contrato de plan
         </h2>
         <hr />
