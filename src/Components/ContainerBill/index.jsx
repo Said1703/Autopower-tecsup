@@ -2,13 +2,15 @@
 import { Button, FormWindow } from "../../Components";
 
 export default function ContainerBill({ setActiveStep }) {
+  const today = new Date();
+
+  const datePeriodo = new Date();
+  datePeriodo.setMonth(datePeriodo.getMonth() + 1);
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-
     setActiveStep(2);
   };
-
-  setActiveStep(2);
 
   const planSeleccionado = JSON.parse(
     localStorage.getItem("plan_seleccionado")
@@ -17,14 +19,14 @@ export default function ContainerBill({ setActiveStep }) {
   return (
     <FormWindow>
       <form onSubmit={handleFormSubmit}>
-        <h2 className="text-2xl font-bold text-center mt-1 mb-2">
+        <h2 className="text-2xl font-bold text-center mt-2 mb-4">
           Contrato de plan
         </h2>
         <hr />
 
         <div className="flex justify-center">
-          <h1 className="text-2xl font-bold text-center text-sky-400 mt-4 mb-4">
-            Plan Gold
+          <h1 className="text-2xl font-bold text-center text-sky-400 mt-8 mb-4">
+            {planSeleccionado.plan}
           </h1>
         </div>
 
@@ -42,7 +44,7 @@ export default function ContainerBill({ setActiveStep }) {
             <p className=" ">Fecha de Inicio:</p>
           </div>
           <div className="w-1/3  mx-auto h-10">
-            <p className="font-bold">25/10/2023</p>
+            <p className="font-bold">{today.toLocaleDateString()}</p>
           </div>
         </div>
 
@@ -51,7 +53,7 @@ export default function ContainerBill({ setActiveStep }) {
             <p className=" ">Fecha fin:</p>
           </div>
           <div className="w-1/3  mx-auto h-10">
-            <p className="font-bold">25/11/2023</p>
+            <p className="font-bold">{datePeriodo.toLocaleDateString()}</p>
           </div>
         </div>
 
