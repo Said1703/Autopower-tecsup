@@ -16,6 +16,12 @@ export default function ContainerBill({ setActiveStep }) {
     localStorage.getItem("plan_seleccionado")
   );
 
+
+
+  const planSeleccionado = JSON.parse(localStorage.getItem('plan_seleccionado'))
+
+
+
   return (
     <FormWindow>
       <form onSubmit={handleFormSubmit}>
@@ -25,8 +31,10 @@ export default function ContainerBill({ setActiveStep }) {
         <hr />
 
         <div className="flex justify-center">
+
           <h1 className="text-2xl font-bold text-center text-sky-400 mt-8 mb-4">
             {planSeleccionado.plan}
+
           </h1>
         </div>
 
