@@ -3,9 +3,15 @@ import { useState } from "react";
 import { Button, FormWindow, Paragraph } from "../../Components";
 import Swal from "sweetalert2";
 import TextFaild from "../TextField";
+import { create } from "../../services";
 
+export default function ContainerForms({
+  valoresForms,
+  setValoresForms,
+  setActiveStep,
+}) {
+  const [textClient, setTextClient] = useState("");
 
-export default function ContainerForms({ valoresForms, setValoresForms, setActiveStep }) {
   const {
     nombre,
     apellido,
@@ -60,7 +66,8 @@ export default function ContainerForms({ valoresForms, setValoresForms, setActiv
 
     if (validate()) {
       console.log("guardando");
-      setActiveStep(1)
+      await create(valoresForms, "buy_service");
+      setActiveStep(1);
       Swal.fire("Exito", "Datos Registrados", "success");
     } else {
       Swal.fire(
@@ -74,7 +81,6 @@ export default function ContainerForms({ valoresForms, setValoresForms, setActiv
   return (
     <section>
       <FormWindow>
-        
         <h2 className="text-2xl font-bold text-center mt-2 mb-4">
           Información personal
         </h2>
@@ -249,10 +255,10 @@ export default function ContainerForms({ valoresForms, setValoresForms, setActiv
               <option className="text-gray-300" value="0">
                 Tipo de Vehículo
               </option>
-              <option value="1">Camioneta</option>
-              <option value="2">Carro</option>
-              <option value="3">Moto</option>
-              <option value="4">Otro</option>
+              <option value="camioneta">Camioneta</option>
+              <option value="carro">Carro</option>
+              <option value="4x4">4x4</option>
+              <option value="otros">Otro</option>
             </select>
 
             {Mensaje && valoresForms.tipoVehiculo == "0" && (

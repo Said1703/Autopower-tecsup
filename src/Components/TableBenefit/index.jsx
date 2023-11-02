@@ -78,7 +78,7 @@ export default function TableBenefit() {
               Razones externas
             </th>
             <td className="px-6 py-4">Platinum</td>
-            <td className="px-6 py-4">Laptop PC</td>
+            <td className="px-6 py-4">Anual</td>
           </tr>
 
           <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">

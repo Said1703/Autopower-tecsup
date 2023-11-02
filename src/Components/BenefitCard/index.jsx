@@ -15,7 +15,7 @@ export default function BenefitCard() {
               <h6 className="text-xl font-semibold">Ahorro</h6>
               <p className="mt-2 mb-4 text-gray-600">
                 Nuestra póliza de seguro reconoce el ahorro y te recompensa con
-                primas más asequibles.
+                primas más asequibles que la competencia.
               </p>
             </div>
           </div>
