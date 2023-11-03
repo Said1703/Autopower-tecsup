@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import Cards from 'react-credit-cards-2';
 import 'react-credit-cards-2/dist/es/styles-compiled.css'
@@ -7,7 +8,7 @@ import TermsAndConditions from '../TermsAndConditions';
 
 
 
-export default function ConatinerData() {
+export default function ConatinerData({setActiveStep}) {
 
     const [values, setValues] = useState({
         number: '',
@@ -32,13 +33,16 @@ export default function ConatinerData() {
             setButtonActive(true)
         }
 
-        console.log(inputs)
-        console.log(complete);
     }
 
     const handleInputFocus = (evt) => {
         setValues((prev) => ({ ...prev, focus: evt.target.name }));
     }
+
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+        setActiveStep(3);
+      };
 
 
     return (
@@ -57,7 +61,7 @@ export default function ConatinerData() {
                 />
             </div>
 
-            <form className="my-6" action="">
+            <form onSubmit={handleFormSubmit} className="my-6" action="">
 
                 <div className="mb-4">
                     <TextFaild
