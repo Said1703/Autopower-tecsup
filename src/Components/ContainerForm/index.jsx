@@ -10,7 +10,7 @@ export default function ContainerForms({
   setValoresForms,
   setActiveStep,
 }) {
-  const [textClient, setTextClient] = useState("");
+
 
   const {
     nombre,
@@ -86,7 +86,7 @@ export default function ContainerForms({
         </h2>
 
         <form onSubmit={handleFormSubmit}>
-          <div className="mb-2">
+          <div className="mb-1">
             <TextFaild
               type="text"
               name="nombre"
@@ -106,7 +106,7 @@ export default function ContainerForms({
                 <Paragraph valueParagraph="Ingrese un nombre válido." />
               )}
           </div>
-          <div className="mb-2">
+          <div className="mb-1">
             <TextFaild
               type="text"
               name="apellido"
@@ -126,7 +126,7 @@ export default function ContainerForms({
                 <Paragraph valueParagraph="Ingrese un apellido válido." />
               )}
           </div>
-          <div className="mb-2">
+          <div className="mb-1">
             <select
               type="text"
               name="tipoDocumento"
@@ -145,7 +145,7 @@ export default function ContainerForms({
               <Paragraph valueParagraph="Seleccione un tipo de documento." />
             )}
           </div>
-          <div className="mb-2 bg-white">
+          <div className="mb-1 bg-white">
             <TextFaild
               type="number"
               name="numeroDoc"
@@ -165,7 +165,7 @@ export default function ContainerForms({
                 <Paragraph valueParagraph="Ingrese un documento válido." />
               )}
           </div>
-          <div className="mb-2 gb-white">
+          <div className="mb-1 gb-white">
             <select
               type="text"
               name="pais"
@@ -188,7 +188,7 @@ export default function ContainerForms({
               <Paragraph valueParagraph="Ingrese un número de documento." />
             )}
           </div>
-          <div className="mb-2">
+          <div className="mb-1">
             <TextFaild
               type="text"
               name="direccion"
@@ -203,7 +203,7 @@ export default function ContainerForms({
               <Paragraph valueParagraph="Ingrese una dirección." />
             )}
           </div>
-          <div className="mb-2">
+          <div className="mb-1">
             <TextFaild
               type="tel"
               name="telefono"
@@ -223,7 +223,7 @@ export default function ContainerForms({
                 <Paragraph valueParagraph="Ingrese un teléfono válido." />
               )}
           </div>
-          <div className="mb-2">
+          <div className="mb-1">
             <TextFaild
               type="email"
               name="email"
@@ -243,7 +243,7 @@ export default function ContainerForms({
                 <Paragraph valueParagraph="Ingrese un email válido." />
               )}
           </div>
-          <div className="mb-8">
+          <div className="mb-4">
             <select
               type="text"
               name="tipoVehiculo"
@@ -265,7 +265,7 @@ export default function ContainerForms({
               <Paragraph valueParagraph="Seleccione un tipo de vehiculo." />
             )}
           </div>
-          <div className="mb-4 text-center">
+          <div className="text-center">
             <Button
               type="submit"
               text="Siguiente"

@@ -50,7 +50,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                             className="bg-gray-200 border border-darkblue"
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
-    
+
                         >
                             4
                         </Step>
