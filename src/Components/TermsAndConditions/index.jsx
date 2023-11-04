@@ -1,5 +1,4 @@
 import { Dialog } from "@headlessui/react";
-import { DocumentTextIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
 export default function TermsAndConditions() {
