@@ -24,7 +24,7 @@ export default function BuyService() {
 
   return (
     <>
-      <main className="md:h-[85vh] bg-white-skyblue">
+      <main className="h-full md:h-[85vh] bg-white-skyblue">
         <Status 
           valoresForms={valoresForms}
           setValoresForms={setValoresForms}
