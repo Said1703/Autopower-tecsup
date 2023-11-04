@@ -17,9 +17,9 @@ export default function ContainerBill({ setActiveStep }) {
     localStorage.getItem("plan_seleccionado")
   );
 
-  let igv = planSeleccionado.precio*0.18
+  let igv = planSeleccionado.precio * 0.18;
 
-  let priceTotal=igv+planSeleccionado.precio
+  let priceTotal = igv + planSeleccionado.precio;
 
   return (
     <FormWindow>
@@ -69,7 +69,9 @@ export default function ContainerBill({ setActiveStep }) {
           <div className="w-1/3  mx-auto h-10">
             <p className="text-blue-700">
               <a href="#" className="text-xs">
-                <span><Contract /></span>
+                <span>
+                  <Contract />
+                </span>
               </a>
             </p>
           </div>
@@ -105,7 +107,7 @@ export default function ContainerBill({ setActiveStep }) {
         </div>
 
         <div className="flex justify-center mb-4">
-          <Button type="submit" text="siguiente" variant="primary" />
+          <Button type="submit" text="Siguiente" variant="primary" />
         </div>
       </form>
     </FormWindow>
