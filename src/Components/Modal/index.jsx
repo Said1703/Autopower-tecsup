@@ -37,20 +37,24 @@ export default function Modal({ visible, onClose }) {
                 Bienvenido a Auto Power
               </h3>
               <p className="hidden md:block text-white p-4 mb-2 md:mb-4 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                lacinia nulla consequat tincidunt facilisis. Nam imperdiet,
-                lacus sed interdum lobortis, felis mi eleifend lacus, quis
-                maximus sapien ex at sapien. Morbi non consequat lacus. Donec ut
-                dui nibh. Integer tristique suscipit arcu eget maximus. Mauris
-                at hendrerit nibh. Proin pretium diam vel odio efficitur, ac
-                suscipit diam posuere. Vivamus quis tincidunt tellus. Etiam arcu
-                tortor, mattis at ornare quis, tempor ac eros.
+                Nos complace que estés aquí, explorando las opciones para
+                proteger tu vehículo eléctrico. Sabemos que has tomado una
+                decisión consciente y sostenible al elegir un auto eléctrico, y
+                queremos asegurarnos de que recibas la mejor cobertura posible.
+                Nuestros planes de seguro están diseñados específicamente para
+                autos eléctricos, teniendo en cuenta sus características y
+                necesidades únicas. Ofrecemos una amplia gama de coberturas,
+                desde daños por accidentes hasta problemas con la batería y el
+                sistema de carga. Navega por nuestra página, conoce nuestras
+                ofertas y no dudes en contactarnos si tienes alguna pregunta.
+                Estamos aquí para ayudarte a mantener tu auto eléctrico seguro y
+                en pleno funcionamiento. ¡Esperamos poder servirte pronto!
               </p>
               <p className="md:hidden text-white p-4 mb-2 md:mb-4 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                lacinia nulla consequat tincidunt facilisis. Nam imperdiet,
-                lacus sed interdum lobortis, felis mi eleifend lacus, quis
-                maximus sapien ex at sapien.
+                Nos complace que estés aquí, explorando las opciones para
+                proteger tu vehículo eléctrico. Sabemos que has tomado una
+                decisión consciente y sostenible al elegir un auto eléctrico, y
+                queremos asegurarnos de que recibas la mejor cobertura posible.
               </p>
               <Link to="/Benefits">
                 <div className="flex justify-center">
