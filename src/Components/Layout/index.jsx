@@ -55,7 +55,7 @@ export default function Layout() {
       <footer className="flex flex-row justify-center items-center pt-4 pb-4 bg-gradient-to-r from-cyan-500 to-blue-500 font-semibold">
         <img className="mr-6 h-8" src={isotipo} />
         <p className="text-white text-xs md:text-lg">
-          Todos los derechos reservados 2023
+          Todos los derechos reservados 2023.
         </p>
       </footer>
     </>
