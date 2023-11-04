@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Button, FormWindow } from "../../Components";
+import Contract from "../Contract";
 
 export default function ContainerBill({ setActiveStep }) {
   const today = new Date();
@@ -15,6 +16,10 @@ export default function ContainerBill({ setActiveStep }) {
   const planSeleccionado = JSON.parse(
     localStorage.getItem("plan_seleccionado")
   );
+
+  let igv = planSeleccionado.precio*0.18
+
+  let priceTotal=igv+planSeleccionado.precio
 
   return (
     <FormWindow>
@@ -65,7 +70,7 @@ export default function ContainerBill({ setActiveStep }) {
           <div className="w-1/3  mx-auto h-10">
             <p className="text-blue-700">
               <a href="#" className="text-xs">
-                Término de contrato
+                <span><Contract /></span>
               </a>
             </p>
           </div>
@@ -87,7 +92,7 @@ export default function ContainerBill({ setActiveStep }) {
             <p className="">IGV:</p>
           </div>
           <div className="w-1/3  mx-auto h-10">
-            <p className="font-bold">0%</p>
+            <p className="font-bold">18%</p>
           </div>
         </div>
 
@@ -96,7 +101,7 @@ export default function ContainerBill({ setActiveStep }) {
             <p className="">Pago total:</p>
           </div>
           <div className="w-1/3  mx-auto h-12">
-            <p className="font-bold">$22.99</p>
+            <p className="font-bold">${priceTotal}</p>
           </div>
         </div>
 
