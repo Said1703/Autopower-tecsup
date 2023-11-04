@@ -268,7 +268,7 @@ export default function ContainerForms({
           <div className="mb-4 text-center">
             <Button
               type="submit"
-              text="siguiente"
+              text="Siguiente"
               variant="primary"
               disabled={false}
             />
