@@ -1,17 +1,13 @@
-import { makeHttpRequest } from "./config";
+const URLapi = "https://653d54fff52310ee6a9a19b6.mockapi.io/";
 
 export async function create(body, url) {
-    return await makeHttpRequest({ url, body, method: "POST" });
-  }
-  
-  export async function read(url) {
-    return await makeHttpRequest({ url });
-  }
-  
-  export async function update(id, body, url) {
-    return await makeHttpRequest({ body, id, method: "PUT", url });
-  }
-  
-  export async function destroy(id, url) {
-    return await makeHttpRequest({ id, url, method: "DELETE" });
-  }
+  const response = await fetch(URLapi + url, {
+    method: "POST",
+    body:JSON.stringify(body),
+    headers:{"Content-type": "application/json"}
+  });
+
+  const data = await response.json()
+
+  return data;
+}

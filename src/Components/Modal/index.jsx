@@ -13,7 +13,7 @@ export default function Modal({ visible, onClose }) {
     <>
       <section
         onClick={handleOnClose}
-        className="fixed inset-0 z-40 bg-black bg-opacity-20"
+        className="fixed inset-0 z-40 bg-black bg-opacity-40"
       >
         <div className="fixed top-16 left-0 right-0 bottom-10 w-full md:w-3/6 h-4/6 md:h-4/6 mx-auto bg-gray-900/80 rounded-xl backdrop-blur-md flex flex-col md:flex-row gap-8 z-50">
           <img

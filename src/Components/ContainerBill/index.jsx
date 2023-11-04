@@ -25,7 +25,6 @@ export default function ContainerBill({ setActiveStep }) {
         <hr />
 
         <div className="flex justify-center">
-
           <h1 className="text-2xl font-bold text-center text-sky-400 mt-8 mb-4">
             {planSeleccionado.plan}
           </h1>
