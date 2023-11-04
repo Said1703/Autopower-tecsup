@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import { Stepper, Step, Button } from "@material-tailwind/react";
+import { Stepper, Step } from "@material-tailwind/react";
 
 export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setValoresForms }) {
     const [activeStep, setActiveStep] = useState(0);
@@ -9,7 +10,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
 
     return (
         <>
-            <div className="w-full bg-white py-4 px-10">
+            <div className="w-full bg-white-skyblue py-4 px-10">
                 <div className="md:w-4/12 m-auto">
                     <Stepper
                         activeStep={activeStep}
@@ -19,7 +20,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                         activeLineClassName="bg-darkblue"
                     >
                         <Step
-                            className="bg-gray-200"
+                            className="bg-gray-200 border border-darkblue"
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
                             onClick={() => setActiveStep(0)}
@@ -28,7 +29,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                         </Step>
 
                         <Step
-                            className="bg-gray-200"
+                            className="bg-gray-200 border border-darkblue"
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
                             onClick={() => setActiveStep(1)}
@@ -37,7 +38,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                         </Step>
 
                         <Step
-                            className="bg-gray-200"
+                            className="bg-gray-200 border border-darkblue"
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
                             onClick={() => setActiveStep(2)}
@@ -46,14 +47,13 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                         </Step>
 
                         <Step
-                            className="bg-gray-200"
+                            className="bg-gray-200 border border-darkblue"
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
                             onClick={() => setActiveStep(3)}
                         >
                             4
                         </Step>
-
 
                     </Stepper>
 
