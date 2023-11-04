@@ -23,7 +23,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                             className="bg-gray-200 border border-darkblue"
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
-                            onClick={() => setActiveStep(0)}
+                            
                         >
                             1
                         </Step>
@@ -32,7 +32,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                             className="bg-gray-200 border border-darkblue"
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
-                            onClick={() => setActiveStep(1)}
+                            
                         >
                             2
                         </Step>
@@ -41,7 +41,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                             className="bg-gray-200 border border-darkblue"
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
-                            onClick={() => setActiveStep(2)}
+                            
                         >
                             3
                         </Step>
@@ -50,7 +50,7 @@ export default function Status({ Step1, Step2, Step3, Step4, valoresForms, setVa
                             className="bg-gray-200 border border-darkblue"
                             activeClassName="bg-skyblue"
                             completedClassName="bg-darkblue-select"
-                            onClick={() => setActiveStep(3)}
+                            
                         >
                             4
                         </Step>
