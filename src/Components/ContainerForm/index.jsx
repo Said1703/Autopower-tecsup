@@ -80,7 +80,7 @@ export default function ContainerForms({
 
   return (
     <section>
-      <FormWindow>
+      <FormWindow className={"md:h-[75.2vh]"}>
         <h2 className="text-2xl font-bold text-center mt-2 mb-4">
           Información personal
         </h2>

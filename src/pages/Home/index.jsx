@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="bg-white-skyblue">
+      <main className="bg-white-skyblue mt-8 md:pt-20">
         <Hero pryceForm={pryceForm}/>
         <section className="mt-6 md:mt-24 w-[70%] m-auto">
           <h2 className="text-lg lg:text-4xl text-center my-3 font-bold tracking-wider">
