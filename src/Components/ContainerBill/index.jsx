@@ -22,7 +22,7 @@ export default function ContainerBill({ setActiveStep }) {
   let priceTotal = igv + planSeleccionado.precio;
 
   return (
-    <FormWindow>
+    <FormWindow className={"md:h-[75.2vh]"}>
       <form onSubmit={handleFormSubmit}>
         <h2 className="text-2xl font-bold text-center mt-2 mb-4">
           Contrato de plan

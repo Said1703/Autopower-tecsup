@@ -4,7 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 export default function Layout() {
   return (
     <>
-      <nav className="fixex top-0 left-0 bg-gradient-to-r from-cyan-500 to-blue-500 w-full shadow p-3 z-30">
+      <nav className="fixed top-0 h-[9vh] left-0 bg-gradient-to-r from-cyan-500 to-blue-500 w-full shadow p-3 z-30">
         <div className="container m-auto flex justify-between items-center text-white">
           <Link to="/">
             <img className="md:w-44 w-32 ml-6" src={logo} />
@@ -52,7 +52,7 @@ export default function Layout() {
 
       <Outlet />
 
-      <footer className="flex flex-row justify-center items-center pt-4 pb-4 bg-gradient-to-r from-cyan-500 to-blue-500 font-semibold">
+      <footer className="flex h-[7vh] flex-row justify-center items-center pt-4 pb-4 bg-gradient-to-r from-cyan-500 to-blue-500 font-semibold">
         <img className="mr-6 h-8" src={isotipo} />
         <p className="text-white text-xs md:text-lg">
           Todos los derechos reservados 2023.

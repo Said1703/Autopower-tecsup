@@ -6,7 +6,7 @@ import star from "../../assets/icons/star.png";
 
 export default function PaymentConfirmation({ valoresForms }) {
   return (
-    <FormWindow className="border flex flex-col pb-14">
+    <FormWindow className={"border flex flex-col pb-14 md:h-[75.2vh]"}>
       <div className="bg-darkblue-select py-6 flex justify-center rounded-t-2xl">
         <img className="md:w-50 w-25 p-4" src={like} />
       </div>
