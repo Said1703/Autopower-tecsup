@@ -1,13 +1,39 @@
-const URLapi = "https://653d54fff52310ee6a9a19b6.mockapi.io/";
+import {BASE_URL} from "./config"
+function getFormatDate() {
+  const date = new Date();
+  return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+}
 
-export async function create(body, url) {
-  const response = await fetch(URLapi + url, {
-    method: "POST",
-    body:JSON.stringify(body),
-    headers:{"Content-type": "application/json"}
-  });
+export async function storeBuy(data) {
+  try {
+    const body = {
+      payment_date: getFormatDate(),
+      payer_email: data.payer.email,
+      payer_document_type: data.payer.identification.type,
+      payer_document_number: data.payer.identification.number,
+      installments: data.installments,
+      issuer_id: data.issuer_id,
+      payment_method_id: data.payment_method_id,
+      token: data.token,
+      status: 1,
+      amount: data.transaction_amount,
+      client: 1,
+    };
 
-  const data = await response.json()
+    const response = await fetch(`${BASE_URL}buy/`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify(body),
+    });
 
-  return data;
+    const responseData = await response.json();
+
+    console.log(responseData);
+
+    return responseData;
+  } catch (error) {
+    console.log(`Error: ${error.message}`);
+  }
 }
