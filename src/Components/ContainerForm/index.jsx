@@ -75,13 +75,38 @@ export default function ContainerForms({
       );
     }
 
-    const { data, ok } = await create(value, "containerBill");
+    const [nombre, setNombre] = useState("");
+
+    const { ok,data } = await create(
+      {
+        user_name: nombre,
+        last_name: apellido,
+        email: email,
+        tipo_documento: tipoDocumento,
+        numero_doc: numeroDoc,
+        pais: pais,
+        telefono: telefono,
+        tipo_vehiculo: tipoVehiculo,
+        placa_vehiculo: placa
+    },
+      "user"
+    );
 
     if (!ok) {
       //aqui estoy validando el post del backend//
       showError(data);
       return;
     }
+
+    setNombre("");
+
+    Swal.fire({
+      title: "Success",
+      text: "Se creo la tarea correctamente",
+      icon: "success",
+    });
+
+    
 
     dispatch(saveUser(user));
     Navigate("/");
