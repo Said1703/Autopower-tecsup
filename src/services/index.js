@@ -19,6 +19,7 @@ export async function storeBuy(data) {
       amount: data.transaction_amount,
       client: 1,
     };
+    
 
     const response = await fetch(`${BASE_URL}buy/`, {
       headers: {
@@ -38,6 +39,6 @@ export async function storeBuy(data) {
   }
 }
 
-export async function create (body, url){
-  return await makeHttpRequest({url, body, method:"POST"});
+export async function create(body, url) {
+  return await makeHttpRequest({ url, body, method: "POST" });
 }
