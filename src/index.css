@@ -5,3 +5,8 @@
 body, input, button {
     font-family: 'Poppins', sans-serif;
 }
+
+.backgroundImage{
+    background: url("src/assets/img/login.jpg");
+    background-size: cover;
+}

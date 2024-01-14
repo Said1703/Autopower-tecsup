@@ -4,7 +4,7 @@ import instagram from "../../assets/icons/instagram.jpg";
 import x from "../../assets/icons/x.svg";
 export default function Contact() {
   return (
-    <section className="md:py-28 flex flex-wrap items-center">
+    <section className="md:h-[93vh] flex flex-wrap items-center">
       <div className="w-full md:w-5/12 px-4 mr-auto ml-auto mt-16">
         <h2 className="text-3xl font-semibold leading-normal">Contactanos:</h2>
         <p className="text-justify text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">

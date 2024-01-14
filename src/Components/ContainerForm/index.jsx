@@ -16,7 +16,7 @@ export default function ContainerForms({
     tipoDocumento,
     numeroDoc,
     pais,
-    direccion,
+    placa,
     telefono,
     email,
     tipoVehiculo,
@@ -201,21 +201,9 @@ export default function ContainerForms({
               <Paragraph valueParagraph="Ingrese un número de documento." />
             )}
           </div>
-          <div className="mb-1">
-            <TextFaild
-              type="text"
-              name="direccion"
-              placeholder="Direccion de residencia"
-              value={direccion}
-              onChange={handleActualizarInputs}
-              className="w-full"
-              required={false}
-            />
 
-            {Mensaje && valoresForms.direccion == "" && (
-              <Paragraph valueParagraph="Ingrese una dirección." />
-            )}
-          </div>
+          
+
           <div className="mb-1">
             <TextFaild
               type="tel"
@@ -236,6 +224,7 @@ export default function ContainerForms({
                 <Paragraph valueParagraph="Ingrese un teléfono válido." />
               )}
           </div>
+
           <div className="mb-1">
             <TextFaild
               type="email"
@@ -256,7 +245,8 @@ export default function ContainerForms({
                 <Paragraph valueParagraph="Ingrese un email válido." />
               )}
           </div>
-          <div className="mb-4">
+
+          <div className="mb-1">
             <select
               type="text"
               name="tipoVehiculo"
@@ -268,16 +258,38 @@ export default function ContainerForms({
               <option className="text-gray-300" value="0">
                 Tipo de Vehículo
               </option>
-              <option value="camioneta">Camioneta</option>
-              <option value="carro">Carro</option>
-              <option value="4x4">4x4</option>
-              <option value="otros">Otro</option>
+              <option value="sedan">Sedán</option>
+              <option value="hatchback">Hatchback</option>
+              <option value="coupe">Coupé</option>
+              <option value="station wagon">Station Wagon</option>
+              <option value="suv">SUV</option>
+              <option value="crossover">Crossover</option>
+              <option value="convertible">Convertible</option>
+              <option value="4x4">4X4</option>
+              <option value="otros">Otros</option>
             </select>
 
             {Mensaje && valoresForms.tipoVehiculo == "0" && (
               <Paragraph valueParagraph="Seleccione un tipo de vehiculo." />
             )}
           </div>
+
+          <div className="mb-4">
+            <TextFaild
+              type="text"
+              name="placa"
+              placeholder="Ingrese la placa de su vehiculo"
+              value={placa}
+              onChange={handleActualizarInputs}
+              className="w-full"
+              required={false}
+            />
+
+            {Mensaje && valoresForms.placa == "" && (
+              <Paragraph valueParagraph="Ingrese una placa." />
+            )}
+          </div>
+
           <div className="text-center">
             <Button
               type="submit"
