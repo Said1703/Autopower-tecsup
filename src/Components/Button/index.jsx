@@ -5,7 +5,8 @@ export default function Button({
   className,
   variant = "primary",
   disabled = false,
-  handleButtonClick
+  handleButtonClick,
+  handleInputChange,
 }) {
   const colors = {
     primary:
@@ -22,6 +23,7 @@ export default function Button({
         disabled={disabled}
         className={`w-11/12 py-2 mb-1 px-4 rounded-lg md:w-7/12 ${colors[variant]} ${className}`}
         onClick={handleButtonClick}
+        onChange = {handleInputChange}
       >
         {text}
       </button>

@@ -15,7 +15,7 @@ export default function BuyService() {
     tipoDocumento: "0",
     numeroDoc: "",
     pais: "0",
-    direccion: "",
+    placa: "",
     telefono: "",
     email: "",
     tipoVehiculo: "0",

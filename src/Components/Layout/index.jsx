@@ -4,7 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 export default function Layout() {
   return (
     <>
-      <nav className="fixed top-0 h-[9vh] left-0 bg-gradient-to-r from-cyan-500 to-blue-500 w-full shadow p-3 z-30">
+      <nav className="fixed top-0 left-0 bg-gradient-to-r from-cyan-500 to-blue-500 w-full shadow p-3 z-30">
         <div className="container m-auto flex justify-between items-center text-white">
           <Link to="/">
             <img className="md:w-44 w-32 ml-6" src={logo} />
@@ -22,7 +22,7 @@ export default function Layout() {
               <li className="hover:bg-darkblue-select py-4 px-6">CONTACTO</li>
             </Link>
             <Link to="/Login">
-              <li className="hover:bg-darkblue-select py-4 px-6">LOGIN</li>
+              <li className="hover:bg-darkblue-select py-4 px-6">AUTENTIFICAR</li>
             </Link>
           </ul>
           <button className="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gary-200 group">
