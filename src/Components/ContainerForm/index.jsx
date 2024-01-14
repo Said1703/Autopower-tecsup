@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Button, FormWindow, Paragraph } from "../../Components";
+import { create } from "../../services";
 import Swal from "sweetalert2";
 import TextFaild from "../TextField";
 
@@ -73,6 +74,17 @@ export default function ContainerForms({
         "warning"
       );
     }
+
+    const { data, ok } = await create(value, "containerBill");
+
+    if (!ok) {
+      //aqui estoy validando el post del backend//
+      showError(data);
+      return;
+    }
+
+    dispatch(saveUser(user));
+    Navigate("/");
   };
 
   return (
@@ -172,13 +184,17 @@ export default function ContainerForms({
               className="form-select border-b-2 w-full px-3 py-2  focus:outline-none focus:border-blue-500 bg-white text-gray-400"
             >
               <option value="0">País</option>
-              <option value="per">Perú</option>
-              <option value="col">Colombia</option>
-              <option value="arg">Argentina</option>
-              <option value="chi">Chile</option>
-              <option value="uru">Uruguay</option>
-              <option value="ecu">Ecuador</option>
-              <option value="bol">Bolivia</option>
+              <option value="PE">Perú</option>
+              <option value="VE">Venezuela</option>
+              <option value="MX">México</option>
+              <option value="EC">Ecuador</option>
+              <option value="AR">Argentina</option>
+              <option value="UY">Uruguay</option>
+              <option value="CL">Chile</option>
+              <option value="BO">Bolivia</option>
+              <option value="PY">Paraguay</option>
+              <option value="BR">Brasil</option>
+              <option value="CO">Colombia</option>
             </select>
 
             {Mensaje && valoresForms.pais == "0" && (

@@ -1,4 +1,4 @@
-import {BASE_URL} from "./config"
+import {BASE_URL, makeHttpRequest} from "./config"
 function getFormatDate() {
   const date = new Date();
   return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
@@ -36,4 +36,8 @@ export async function storeBuy(data) {
   } catch (error) {
     console.log(`Error: ${error.message}`);
   }
+}
+
+export async function create (body, url){
+  return await makeHttpRequest({url, body, method:"POST"});
 }
