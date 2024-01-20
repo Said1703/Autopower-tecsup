@@ -75,8 +75,6 @@ export default function ContainerForms({
       );
     }
 
-    const [user_name, setNombre] = useState("");
-
     const { ok, data } = await create(
       {
         user_name: user_name,
@@ -94,11 +92,9 @@ export default function ContainerForms({
 
     if (!ok) {
       //aqui estoy validando el post del backend//
-      showError(data);
+      data;
       return;
     }
-
-    setNombre("");
 
     Swal.fire({
       title: "Success",
@@ -106,8 +102,6 @@ export default function ContainerForms({
       icon: "success",
     });
 
-    dispatch(saveUser(user));
-    Navigate("/");
   };
 
   return (
