@@ -11,15 +11,15 @@ export default function ContainerForms({
   setActiveStep,
 }) {
   const {
-    nombre,
-    apellido,
-    tipoDocumento,
-    numeroDoc,
+    user_name,
+    last_name,
+    tipo_documento,
+    numero_doc,
     pais,
-    placa,
+    placa_vehiculo,
     telefono,
     email,
-    tipoVehiculo,
+    tipo_vehiculo,
   } = valoresForms;
   const regExpCorreo = new RegExp(
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
@@ -39,14 +39,14 @@ export default function ContainerForms({
   const validate = () => {
     let status = true;
     if (
-      valoresForms.nombre === "" ||
-      valoresForms.apellido === "" ||
-      valoresForms.tipoDocumento === "0" ||
-      valoresForms.numeroDoc === "" ||
+      valoresForms.user_name === "" ||
+      valoresForms.last_name === "" ||
+      valoresForms.tipo_documento === "0" ||
+      valoresForms.numero_doc === "" ||
       valoresForms.pais === "0" ||
-      valoresForms.direccion === "" ||
+      valoresForms.placa_vehiculo === "" ||
       valoresForms.telefono === "" ||
-      valoresForms.tipoVehiculo === "0" ||
+      valoresForms.tipo_vehiculo === "0" ||
       valoresForms.email === ""
     ) {
       status = false;
@@ -64,7 +64,7 @@ export default function ContainerForms({
 
     if (validate()) {
       console.log("guardando");
-      await create(valoresForms, "buy_service");
+      await create(valoresForms, "information/");
       setActiveStep(1);
       Swal.fire("Exito", "Datos Registrados", "success");
     } else {
@@ -75,20 +75,20 @@ export default function ContainerForms({
       );
     }
 
-    const [nombre, setNombre] = useState("");
+    const [user_name, setNombre] = useState("");
 
-    const { ok,data } = await create(
+    const { ok, data } = await create(
       {
-        user_name: nombre,
-        last_name: apellido,
+        user_name: user_name,
+        last_name: last_name,
         email: email,
-        tipo_documento: tipoDocumento,
-        numero_doc: numeroDoc,
+        tipo_documento: tipo_documento,
+        numero_doc: numero_doc,
         pais: pais,
         telefono: telefono,
-        tipo_vehiculo: tipoVehiculo,
-        placa_vehiculo: placa
-    },
+        tipo_vehiculo: tipo_vehiculo,
+        placa_vehiculo: placa_vehiculo,
+      },
       "user"
     );
 
@@ -106,8 +106,6 @@ export default function ContainerForms({
       icon: "success",
     });
 
-    
-
     dispatch(saveUser(user));
     Navigate("/");
   };
@@ -123,79 +121,79 @@ export default function ContainerForms({
           <div className="mb-1">
             <TextFaild
               type="text"
-              name="nombre"
-              value={nombre}
+              name="user_name"
+              value={user_name}
               placeholder="Nombre"
               onChange={handleActualizarInputs}
               className="w-full"
               required={false}
             />
 
-            {Mensaje && valoresForms.nombre == "" && (
+            {Mensaje && valoresForms.user_name == "" && (
               <Paragraph valueParagraph="Ingrese un nombre." />
             )}
 
-            {!regExpTexto.test(valoresForms.nombre) &&
-              valoresForms.nombre.length > 0 && (
+            {!regExpTexto.test(valoresForms.user_name) &&
+              valoresForms.user_name.length > 0 && (
                 <Paragraph valueParagraph="Ingrese un nombre válido." />
               )}
           </div>
           <div className="mb-1">
             <TextFaild
               type="text"
-              name="apellido"
+              name="last_name"
               placeholder="Apellidos"
-              value={apellido}
+              value={last_name}
               onChange={handleActualizarInputs}
               className="w-full"
               required={false}
             />
 
-            {Mensaje && valoresForms.apellido == "" && (
+            {Mensaje && valoresForms.last_name == "" && (
               <Paragraph valueParagraph="Ingrese un apellido." />
             )}
 
-            {!regExpTexto.test(valoresForms.apellido) &&
-              valoresForms.apellido.length > 0 && (
+            {!regExpTexto.test(valoresForms.last_name) &&
+              valoresForms.last_name.length > 0 && (
                 <Paragraph valueParagraph="Ingrese un apellido válido." />
               )}
           </div>
           <div className="mb-1">
             <select
               type="text"
-              name="tipoDocumento"
+              name="tipo_documento"
               placeholder="Tipo de documento"
-              value={tipoDocumento}
+              value={tipo_documento}
               onChange={handleActualizarInputs}
               className="border-b-2 w-full px-3 py-2  focus:outline-none focus:border-blue-500 bg-white text-gray-400"
             >
               <option value="0">Tipo de documento</option>
-              <option value="ced">Cedula</option>
-              <option value="tar">Tarjeta</option>
-              <option value="dni">DNI</option>
+              <option value="PAS">Pasaporte</option>
+              <option value="CAR">Carnet de extranjeria</option>
+              <option value="DNI">DNI</option>
             </select>
 
-            {Mensaje && valoresForms.tipoDocumento == "0" && (
+            {Mensaje && valoresForms.tipo_documento == "0" && (
               <Paragraph valueParagraph="Seleccione un tipo de documento." />
             )}
           </div>
           <div className="mb-1 bg-white">
             <TextFaild
               type="number"
-              name="numeroDoc"
+              name="numero_doc"
               placeholder="Numero de documento"
-              value={numeroDoc}
+              value={numero_doc}
               onChange={handleActualizarInputs}
               className="w-full"
               required={false}
             />
 
-            {Mensaje && valoresForms.numeroDoc == "" && (
+            {Mensaje && valoresForms.numero_doc == "" && (
               <Paragraph valueParagraph="Ingrese un número de documento." />
             )}
 
-            {!regExpNumeros.test(valoresForms.numeroDoc) &&
-              valoresForms.numeroDoc.length > 0 && (
+            {!regExpNumeros.test(valoresForms.numero_doc) &&
+              valoresForms.numero_doc.length > 0 && (
                 <Paragraph valueParagraph="Ingrese un documento válido." />
               )}
           </div>
@@ -226,8 +224,6 @@ export default function ContainerForms({
               <Paragraph valueParagraph="Ingrese un número de documento." />
             )}
           </div>
-
-          
 
           <div className="mb-1">
             <TextFaild
@@ -274,27 +270,27 @@ export default function ContainerForms({
           <div className="mb-1">
             <select
               type="text"
-              name="tipoVehiculo"
+              name="tipo_vehiculo"
               placeholder="Tipo de Vehiculo"
-              value={tipoVehiculo}
+              value={tipo_vehiculo}
               onChange={handleActualizarInputs}
               className="Block border-b-2 w-full px-3 py-2  focus:outline-none focus:border-blue-500 bg-white text-gray-400"
             >
               <option className="text-gray-300" value="0">
                 Tipo de Vehículo
               </option>
-              <option value="sedan">Sedán</option>
-              <option value="hatchback">Hatchback</option>
-              <option value="coupe">Coupé</option>
-              <option value="station wagon">Station Wagon</option>
-              <option value="suv">SUV</option>
-              <option value="crossover">Crossover</option>
-              <option value="convertible">Convertible</option>
-              <option value="4x4">4X4</option>
-              <option value="otros">Otros</option>
+              <option value="SEDAN">Sedán</option>
+              <option value="HATCHBACK">Hatchback</option>
+              <option value="COUPE">Coupé</option>
+              <option value="STATION_WAGON">Station Wagon</option>
+              <option value="SUV">SUV</option>
+              <option value="CROSSOVER">Crossover</option>
+              <option value="CONVERTIBLE">Convertible</option>
+              <option value="4X4">4X4</option>
+              <option value="OTROS">Otros</option>
             </select>
 
-            {Mensaje && valoresForms.tipoVehiculo == "0" && (
+            {Mensaje && valoresForms.tipo_vehiculo == "0" && (
               <Paragraph valueParagraph="Seleccione un tipo de vehiculo." />
             )}
           </div>
@@ -302,15 +298,15 @@ export default function ContainerForms({
           <div className="mb-4">
             <TextFaild
               type="text"
-              name="placa"
+              name="placa_vehiculo"
               placeholder="Ingrese la placa de su vehiculo"
-              value={placa}
+              value={placa_vehiculo}
               onChange={handleActualizarInputs}
               className="w-full"
               required={false}
             />
 
-            {Mensaje && valoresForms.placa == "" && (
+            {Mensaje && valoresForms.placa_vehiculo == "" && (
               <Paragraph valueParagraph="Ingrese una placa." />
             )}
           </div>

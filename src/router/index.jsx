@@ -1,5 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { About, BuyService, Home, Benefits, Contact,Login, Profile } from "../pages";
+import {
+  About,
+  BuyService,
+  Home,
+  Benefits,
+  Contact,
+  Login,
+  Profile,
+} from "../pages";
 import { Layout } from "../Components";
 export default function Router() {
   return (
