@@ -6,9 +6,14 @@ import { storeBuy } from "../../services";
 
 initMercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY);
 
+const planSeleccionado = JSON.parse(
+  localStorage.getItem("plan_seleccionado")
+);
+
+
 export default function ContainerData({ setActiveStep }) {
   const initialization = {
-    amount: 20,
+    amount: Number(planSeleccionado.precio),
   };
 
   const handleFormSubmit = async (formData) => {
@@ -17,6 +22,7 @@ export default function ContainerData({ setActiveStep }) {
     setActiveStep(3);
   };
 
+  
   return (
     <FormWindow>
       <h2 className="text-2xl font-bold text-center mt-2 mb-4 text-blue-900">

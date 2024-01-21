@@ -19,7 +19,7 @@ export default function PaymentConfirmation({ valoresForms }) {
           id="nameCongratulation"
           className="text-lg font-bold py-2 uppercase"
         >
-          {valoresForms.nombre}
+          {valoresForms.user_name}
         </h3>
 
         <p className="pb-4">

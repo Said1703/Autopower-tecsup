@@ -4,12 +4,13 @@ import FormWindow from "../FormWindow";
 import Button from "../Button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { create, read } from "../../services";
 
 export default function ContainerLogin() {
   const [values, setValues] = useState({
     placa_vehiculo: "",
     tipo_documento: "",
-    numeroDoc: "",
+    numero_doc: "",
   });
 
   const navigate = useNavigate();
@@ -32,8 +33,30 @@ export default function ContainerLogin() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+
+    // await create(values, "login/")
+
+    const { ok, data } = await create(
+      {        
+        tipo_documento: values.tipo_documento,
+        numero_doc: values.numero_doc,
+        placa_vehiculo: values.placa_vehiculo,
+      },
+      "login/"
+    );
+
+    await read(`login/`);  
+
+    if (!ok) {
+      //aqui estoy validando el post del backend//
+      data;
+      return;
+    }
     navigate("/profile");
+    // localStorage.setItem('datos de usuario', data)
     console.log(values);
+    console.log(data);
+    localStorage.setItem('datos_url',JSON.stringify(data))
   };
 
   return (
@@ -47,9 +70,10 @@ export default function ContainerLogin() {
         <div className="py-2">
           <TextFaild
             type="text"
-            name="placa"
+            name="placa_vehiculo"
             placeholder="Placa"
             className="w-full"
+            value={values.placa_vehiculo}
             onChange={handleInputChange}
             required
           />
@@ -64,18 +88,19 @@ export default function ContainerLogin() {
             onChange={handleInputChange}
           >
             <option value="0">Tipo de documento</option>
-            <option value="ced">Cedula</option>
-            <option value="tar">Tarjeta</option>
-            <option value="dni">DNI</option>
+            <option value="PAS">Pasaporte</option>
+            <option value="CAR">Carnet de extranjeria</option>
+            <option value="DNI">DNI</option>
           </select>
         </div>
 
         <div className="py-2">
           <TextFaild
             type="number"
-            name="numeroDoc"
+            name="numero_doc"
             placeholder="Numero de documento"
             className="w-full"
+            value={values.numero_doc}
             onChange={handleInputChange}
             required
           />
