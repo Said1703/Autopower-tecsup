@@ -7,11 +7,19 @@ export async function makeHttpRequest({ url, id, body, method = "GET" }) {
     method,
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${localStorage.getItem("access_token")}`
+      
     },
     body: JSON.stringify(body),
   });
 
+  if (!response.ok) {
+    return {
+      ok:false,
+      data: "Error"
+    }
+  }
+
+  
   const data = await response.json();
 
   return data;

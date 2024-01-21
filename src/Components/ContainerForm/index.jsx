@@ -77,7 +77,7 @@ export default function ContainerForms({
 
     const { ok, data } = await create(
       {
-        user_name: user_name,
+        username: user_name,
         last_name: last_name,
         email: email,
         tipo_documento: tipo_documento,
@@ -87,7 +87,7 @@ export default function ContainerForms({
         tipo_vehiculo: tipo_vehiculo,
         placa_vehiculo: placa_vehiculo,
       },
-      "user"
+      "user/"
     );
 
     if (!ok) {
@@ -101,7 +101,6 @@ export default function ContainerForms({
       text: "Se creo la tarea correctamente",
       icon: "success",
     });
-
   };
 
   return (
