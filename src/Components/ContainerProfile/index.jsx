@@ -1,7 +1,10 @@
 export default function ContainerProfile() {
-    const planSeleccionado = JSON.parse(
-        localStorage.getItem("plan_seleccionado")
+
+    const user = JSON.parse(
+        localStorage.getItem("datos_url")
       );
+
+
     return(
         <div className="h-full flex items-center justify-center">
             <div className="w-11/12 md:w-[40%] bg-white my-4 md:my-0 p-6 rounded-3xl shadow-md md:text-xl"> 
@@ -9,7 +12,7 @@ export default function ContainerProfile() {
                     <tbody>
                         <tr>
                             <td className="border border-slate-600 bg-skyblue-select">Nombres</td>
-                            <td className="border border-slate-600 bg-skyblue-select">Marcos Alejandro</td>
+                            <td className="border border-slate-600 bg-skyblue-select">{user[0].numero_doc}</td>
 
                         </tr>
                         <tr>
@@ -19,7 +22,7 @@ export default function ContainerProfile() {
                         </tr>
                         <tr>
                             <td className="border border-slate-600 bg-skyblue-select">Documento</td>
-                            <td className="border border-slate-600 bg-skyblue-select">123213213</td>
+                            <td className="border border-slate-600 bg-skyblue-select">{user[0].numero_doc}</td>
                         </tr>
                         <tr>
                             <td className="border border-slate-600">Correo Electronico</td>
@@ -27,11 +30,11 @@ export default function ContainerProfile() {
                         </tr>
                         <tr>
                             <td className="border border-slate-600 bg-skyblue-select">Placa</td>
-                            <td className="border border-slate-600 bg-skyblue-select">AZF-992</td>
+                            <td className="border border-slate-600 bg-skyblue-select">{user[0].placa_vehiculo}</td>
                         </tr>
                         <tr>
                             <td className="border border-slate-600">Plan</td>
-                            <td className="border border-slate-600">{planSeleccionado.plan}</td>
+                            {/* <td className="border border-slate-600">{planSeleccionado.plan}</td> */}
                         </tr>
                         <tr>
                             <td className="border border-slate-600 bg-skyblue-select">Caducidad</td>
