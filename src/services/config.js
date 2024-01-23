@@ -15,9 +15,8 @@ export async function makeHttpRequest({ url, id, body, method = "GET" }) {
   if (!response.ok) {
     return {
       ok:false,
-      data: "Error"
-    }
-  }
+      data: "Error"}
+    }
 
   
   const data = await response.json();

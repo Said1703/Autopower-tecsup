@@ -12,12 +12,12 @@ export default function ContainerProfile() {
                     <tbody>
                         <tr>
                             <td className="border border-slate-600 bg-skyblue-select">Nombres</td>
-                            <td className="border border-slate-600 bg-skyblue-select">{user[0].numero_doc}</td>
+                            <td className="border border-slate-600 bg-skyblue-select">{user[0].nombre}</td>
 
                         </tr>
                         <tr>
                             <td className="border border-slate-600">Apellidos</td>
-                            <td className="border border-slate-600">Arellano Vilchez</td>
+                            <td className="border border-slate-600">{user[0].apellidos}</td>
 
                         </tr>
                         <tr>
@@ -26,7 +26,7 @@ export default function ContainerProfile() {
                         </tr>
                         <tr>
                             <td className="border border-slate-600">Correo Electronico</td>
-                            <td className="border border-slate-600">marcos@hotmail.com</td>
+                            <td className="border border-slate-600">{user[0].email}</td>
                         </tr>
                         <tr>
                             <td className="border border-slate-600 bg-skyblue-select">Placa</td>
