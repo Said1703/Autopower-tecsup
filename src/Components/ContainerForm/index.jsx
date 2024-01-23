@@ -64,7 +64,7 @@ export default function ContainerForms({
 
     if (validate()) {
       console.log("guardando");
-      await create(valoresForms, "information/");
+      // await create(valoresForms, "information/");
       setActiveStep(1);
       Swal.fire("Exito", "Datos Registrados", "success");
     } else {
@@ -75,10 +75,14 @@ export default function ContainerForms({
       );
     }
 
+    // const planSeleccionado = JSON.parse(
+    //   localStorage.getItem("plan_seleccionado")
+    // );
+
     const { ok, data } = await create(
       {
-        username: user_name,
-        last_name: last_name,
+        nombre: user_name,
+        apellidos: last_name,
         email: email,
         tipo_documento: tipo_documento,
         numero_doc: numero_doc,
@@ -87,7 +91,7 @@ export default function ContainerForms({
         tipo_vehiculo: tipo_vehiculo,
         placa_vehiculo: placa_vehiculo,
       },
-      "user/"
+      "information/"
     );
 
     if (!ok) {
