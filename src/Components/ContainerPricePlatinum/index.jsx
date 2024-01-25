@@ -6,7 +6,7 @@ export default function ContainerPricePlatinum({pryceForm}) {
   const navigate = useNavigate()
 
   const handleButtonClick= ()=>{
-    localStorage.setItem('plan_seleccionado', JSON.stringify({ plan: 'Platinium', precio: 30 }))
+    localStorage.setItem('plan_seleccionado', JSON.stringify({id:3, plan: 'Platinium', precio: 30 }))
     navigate("/BuyService")
   }
 
