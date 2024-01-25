@@ -75,9 +75,11 @@ export default function ContainerForms({
       );
     }
 
-    // const planSeleccionado = JSON.parse(
-    //   localStorage.getItem("plan_seleccionado")
-    // );
+    const planSeleccionado = JSON.parse(
+      localStorage.getItem("plan_seleccionado")
+    );
+
+
 
     const { ok, data } = await create(
       {
@@ -90,6 +92,7 @@ export default function ContainerForms({
         telefono: telefono,
         tipo_vehiculo: tipo_vehiculo,
         placa_vehiculo: placa_vehiculo,
+        subscription: planSeleccionado.id
       },
       "information/"
     );

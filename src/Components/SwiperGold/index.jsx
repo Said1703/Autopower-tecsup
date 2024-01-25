@@ -9,7 +9,7 @@ export default function SwiperGold({ pryceForm }) {
     const navigate = useNavigate()
 
     const handleButtonClick = () => {
-        localStorage.setItem('plan_seleccionado', JSON.stringify({ plan: 'Gold', precio: 20 }))
+        localStorage.setItem('plan_seleccionado', JSON.stringify({id:2, plan: 'Gold', precio: 20 }))
         navigate("/BuyService")
     }
 

@@ -4,7 +4,7 @@ import FormWindow from "../FormWindow";
 import Button from "../Button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { create, read } from "../../services";
+import { create } from "../../services";
 
 export default function ContainerLogin() {
   const [values, setValues] = useState({
@@ -45,7 +45,7 @@ export default function ContainerLogin() {
       "login/"
     );
 
-    await read(`login/`);  
+    // await read(`login/`);  
 
     if (!ok) {
       //aqui estoy validando el post del backend//

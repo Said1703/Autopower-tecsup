@@ -34,12 +34,12 @@ export default function ContainerProfile() {
                         </tr>
                         <tr>
                             <td className="border border-slate-600">Plan</td>
-                            {/* <td className="border border-slate-600">{planSeleccionado.plan}</td> */}
+                            <td className="border border-slate-600">{user[0].subscription.title}</td>
                         </tr>
-                        <tr>
+                        {/* <tr>
                             <td className="border border-slate-600 bg-skyblue-select">Caducidad</td>
                             <td className="border border-slate-600 bg-skyblue-select">19/12/2023</td>
-                        </tr>
+                        </tr> */}
                     </tbody>
                 </table>
 
